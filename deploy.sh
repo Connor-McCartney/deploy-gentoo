@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # https://www.gentoo.org/downloads/
 # stage3-amd64-desktop-openrc
 STAGE3URL=https://bouncer.gentoo.org/fetch/root/all/releases/amd64/autobuilds/20221211T170150Z/stage3-amd64-desktop-openrc-20221211T170150Z.tar.xz
