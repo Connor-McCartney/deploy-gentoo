@@ -4,7 +4,7 @@ source /etc/profile
 mount "$DISK""1" /boot
 emerge-webrsync
 emerge --sync
-eselect profile set $DESKTOP
+eselect profile set 9
 emerge --verbose --update --deep --newuse @world
 
 
