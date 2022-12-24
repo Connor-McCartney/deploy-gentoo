@@ -16,9 +16,6 @@ emerge --sync
 eselect profile set 9
 emerge --verbose --update --deep --newuse @world
 
-
-emerge gui-apps/wl-clipboard
-emerge x11-misc/xclip
 emerge app-editors/neovim
 emerge $KERNEL
 emerge sys-apps/pciutils
@@ -27,8 +24,6 @@ emerge net-misc/dhcpcd
 emerge net-wireless/wpa_supplicant
 emerge sys-boot/grub
 emerge app-admin/sudo
-emerge app-misc/neofetch
-
 
 echo "Australia/Brisbane" > /etc/timezone
 emerge --config sys-libs/timezone-data
