@@ -35,7 +35,7 @@ env-update && source /etc/profile
 cd /etc
 rm fstab
 wget https://raw.githubusercontent.com/Connor-McCartney/deploy-gentoo/main/fstab
-echo $HOSTNAME > /etc/conf.d/hostname
+echo "gentoo" > /etc/conf.d/hostname
 emerge --noreplace net-misc/netifrc 
 printf "config_$INTERFACE=\"dhcp\"\nmodules_$INTERFACE=\"wpa_supplicant\"\n" > /etc/conf.d/net
 cd /etc/init.d
