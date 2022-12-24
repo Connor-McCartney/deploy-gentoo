@@ -4,9 +4,6 @@
 # stage3-amd64-desktop-openrc
 STAGE3URL=https://bouncer.gentoo.org/fetch/root/all/releases/amd64/autobuilds/20221211T170150Z/stage3-amd64-desktop-openrc-20221211T170150Z.tar.xz
 
-# https://packages.gentoo.org/packages/sys-kernel/gentoo-kernel-bin
-KERNEL="sys-kernel/gentoo-kernel-bin:5.15.83"
-
 # fdisk -l
 DISK=/dev/sda
 
