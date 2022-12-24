@@ -12,8 +12,7 @@ DISK=/dev/sda
 
 HOSTNAME="gentoo"
 
-# ip a
-INTERFACE="wlan0"
+
 
 
 date -s "$(wget --method=HEAD -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f4-10)" 
