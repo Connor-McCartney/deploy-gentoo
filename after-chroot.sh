@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# fdisk -l
+DISK=/dev/sda
+
 # ip a
 INTERFACE="wlan0"
 
