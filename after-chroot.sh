@@ -48,7 +48,7 @@ grub-install $DISK # legacy
 # grub-install --target=x86_64-efi --efi-directory=/boot # UEFI
 
 grub-mkconfig -o /boot/grub/grub.cfg
-useradd -m -G users,wheel,audio,plugdev,video,sddm -s /bin/bash connor
+useradd -m -G users,wheel,audio,video -s /bin/bash connor
 
 
 
