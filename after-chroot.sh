@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# ip a
+INTERFACE="wlan0"
+
+
+
+
 source /etc/profile
 mount "$DISK""1" /boot
 emerge-webrsync
