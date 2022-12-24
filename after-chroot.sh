@@ -10,7 +10,6 @@ INTERFACE="wlan0"
 KERNEL="sys-kernel/gentoo-kernel-bin:5.15.83"
 
 
-
 source /etc/profile
 mount "$DISK""1" /boot
 emerge-webrsync
@@ -33,7 +32,6 @@ echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 locale-gen
 eselect locale set 4 # (US one just made)
 env-update && source /etc/profile
-
 cd /etc
 rm fstab
 wget https://raw.githubusercontent.com/Connor-McCartney/deploy-gentoo/main/fstab
@@ -48,8 +46,8 @@ rc-service dhcpcd start
 
 grub-install $DISK # legacy
 # grub-install --target=x86_64-efi --efi-directory=/boot # UEFI
-grub-mkconfig -o /boot/grub/grub.cfg
 
+grub-mkconfig -o /boot/grub/grub.cfg
 useradd -m -G users,wheel,audio,plugdev,video,sddm -s /bin/bash connor
 
 
