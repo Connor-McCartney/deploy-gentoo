@@ -10,8 +10,6 @@ KERNEL="sys-kernel/gentoo-kernel-bin:5.15.83"
 # fdisk -l
 DISK=/dev/sda
 
-HOSTNAME="gentoo"
-
 
 
 
