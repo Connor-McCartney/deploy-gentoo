@@ -41,7 +41,7 @@ mount --make-rslave /mnt/gentoo/dev
 mount --bind /run /mnt/gentoo/run
 mount --make-slave /mnt/gentoo/run
 
-cd /tmp
+cd /mnt/gentoo
 wget https://raw.githubusercontent.com/Connor-McCartney/deploy-gentoo/main/after-chroot.sh
 chmod +x after-chroot.sh
-chroot /mnt/gentoo /tmp/after-chroot.sh
+chroot /mnt/gentoo ./after-chroot.sh
