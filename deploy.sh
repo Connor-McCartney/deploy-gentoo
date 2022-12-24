@@ -10,9 +10,6 @@ KERNEL="sys-kernel/gentoo-kernel-bin:5.15.83"
 # fdisk -l
 DISK=/dev/sda
 
-# eselect profile list
-DESKTOP=9
-
 HOSTNAME="gentoo"
 
 # ip a
