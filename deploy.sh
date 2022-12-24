@@ -11,6 +11,11 @@ DISK=/dev/sda
 # eselect profile list
 DESKTOP=9
 
+HOSTNAME="gentoo"
+
+# ip a
+INTERFACE="wlan0"
+
 
 date -s "$(wget --method=HEAD -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f4-10)" 
 printf "g\nn\n1\n\n+256M\nt\n1\nn\n2\n\n+16G\nt\n2\n19\nn\n3\n\n\nw\n" | fdisk $DISK
@@ -45,9 +50,19 @@ emerge-webrsync
 emerge --sync
 eselect profile set $DESKTOP
 emerge --verbose --update --deep --newuse @world
+
+
 emerge gui-apps/wl-clipboard
 emerge x11-misc/xclip
 emerge app-editors/neovim
+emerge $KERNEL
+emerge sys-apps/pciutils
+emerge sys-kernel/linux-firmware
+emerge net-misc/dhcpcd
+emerge net-wireless/wpa_supplicant
+emerge sys-boot/grub
+emerge app-admin/sudo
+
 ls /usr/share/zoneinfo
 echo "Australia/Brisbane" > /etc/timezone
 emerge --config sys-libs/timezone-data
@@ -56,6 +71,19 @@ locale-gen
 eselect locale list
 eselect locale set 4 # (US one just made)
 env-update && source /etc/profile
-emerge $KERNEL
-emerge sys-apps/pciutils
-emerge sys-kernel/linux-firmware
+
+cd /etc
+rm fstab
+wget https://raw.githubusercontent.com/Connor-McCartney/deploy-gentoo/main/fstab
+echo $HOSTNAME > /etc/conf.d/hostname
+emerge --noreplace net-misc/netifrc 
+printf "config_$INTERFACE=\"dhcp\"\nmodules_$INTERFACE=\"wpa_supplicant\"\n" > /etc/conf.d/net
+cd /etc/init.d
+ln -s net.lo net.$INTERFACE
+rc-update add net.$INTERFACE default
+rc-service net.$INTERFACE start
+rc-service dhcpcd start
+
+grub-install $DISK # legacy
+# grub-install --target=x86_64-efi --efi-directory=/boot # UEFI
+grub-mkconfig -o /boot/grub/grub.cfg
