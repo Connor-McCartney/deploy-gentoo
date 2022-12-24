@@ -6,6 +6,8 @@ DISK=/dev/sda
 # ip a
 INTERFACE="wlan0"
 
+# https://packages.gentoo.org/packages/sys-kernel/gentoo-kernel-bin
+KERNEL="sys-kernel/gentoo-kernel-bin:5.15.83"
 
 
 
