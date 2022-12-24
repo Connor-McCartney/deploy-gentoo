@@ -50,7 +50,9 @@ grub-install $DISK # legacy
 grub-mkconfig -o /boot/grub/grub.cfg
 useradd -m -G users,wheel,audio,video -s /bin/bash connor
 
-
+cd /etc/wpa_supplicant
+rm wpa_supplicant.conf
+wget https://raw.githubusercontent.com/Connor-McCartney/deploy-gentoo/main/wpa_supplicant.conf
 
 # Manual todo
 
@@ -58,3 +60,4 @@ useradd -m -G users,wheel,audio,video -s /bin/bash connor
 # nvim /etc/security/passwdqc.conf # enforce=none
 # passwd connor
 # nvim /etc/wpa_supplicant/wpa_supplicant.conf
+# reboot
