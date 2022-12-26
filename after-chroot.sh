@@ -54,7 +54,7 @@ cd /etc/wpa_supplicant
 rm wpa_supplicant.conf
 wget https://raw.githubusercontent.com/Connor-McCartney/deploy-gentoo/main/wpa_supplicant.conf
 
-echo "enforce=none" > /mnt/gentoo/etc/security/passwdqc.conf # 
+echo "enforce=none" > /mnt/gentoo/etc/security/passwdqc.conf
 
 # Manual todo
 
