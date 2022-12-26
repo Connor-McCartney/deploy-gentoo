@@ -10,7 +10,7 @@ DISK=/dev/sda
 
 date -s "$(wget --method=HEAD -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f4-10)" 
 # printf "g\nn\n1\n\n+256M\nt\n1\nn\n2\n\n+16G\nt\n2\n19\nn\n3\n\n\nw\n" | fdisk $DISK  # UEFU
-printf "g\nn\n1\n\n+256M\nt\n4\nn\n2\n\n+16G\nt\n2\n19\nn\n3\n\n\nw\n" | fdisk $DISK  # BIOS/LEGACY
+printf "g\nn\n1\n\n+256M\nt\n4\nn\n2\n\n+16G\nt\n2\n19\nn\n3\n\n\nx\nA\n1\nr\nw\n" | fdisk $DISK  # BIOS/LEGACY
 mkfs.vfat -F 32 "$DISK""1"
 mkfs.ext4 "$DISK""3"
 mkswap "$DISK""2"
