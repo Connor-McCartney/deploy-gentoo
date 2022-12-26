@@ -58,7 +58,8 @@ echo "enforce=none" > /mnt/gentoo/etc/security/passwdqc.conf
 
 # Manual todo
 
+# chroot /mnt/gentoo /bin/bash
 # visudo # uncomment wheel ALL=(ALL:ALL) ALL
 # passwd connor
-# nano /mnt/gentoo/etc/wpa_supplicant/wpa_supplicant.conf
+# nvim /mnt/gentoo/etc/wpa_supplicant/wpa_supplicant.conf
 # reboot
