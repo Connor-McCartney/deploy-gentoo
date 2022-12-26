@@ -54,10 +54,11 @@ cd /etc/wpa_supplicant
 rm wpa_supplicant.conf
 wget https://raw.githubusercontent.com/Connor-McCartney/deploy-gentoo/main/wpa_supplicant.conf
 
+echo "enforce=none" > /mnt/gentoo/etc/security/passwdqc.conf # 
+
 # Manual todo
 
 # visudo # uncomment wheel ALL=(ALL:ALL) ALL
-# nvim /etc/security/passwdqc.conf # enforce=none
 # passwd connor
-# nvim /etc/wpa_supplicant/wpa_supplicant.conf
+# nano /mnt/gentoo/etc/wpa_supplicant/wpa_supplicant.conf
 # reboot
