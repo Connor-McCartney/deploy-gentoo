@@ -23,6 +23,7 @@ emerge sys-boot/grub
 emerge app-admin/sudo
 emerge app-editors/neovim
 
+eselect kernel set 1
 echo "Australia/Brisbane" > /etc/timezone
 emerge --config sys-libs/timezone-data
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
