@@ -50,7 +50,7 @@ useradd -m -G users,wheel,audio,video -s /bin/bash connor
 cd /etc/wpa_supplicant
 wget https://raw.githubusercontent.com/Connor-McCartney/deploy-gentoo/main/wpa_supplicant.conf
 
-echo "enforce=none" > /mnt/gentoo/etc/security/passwdqc.conf
+echo "enforce=none" > /etc/security/passwdqc.conf
 
 # Manual todo
 
