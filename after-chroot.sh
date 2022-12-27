@@ -7,7 +7,7 @@ DISK=/dev/sda
 INTERFACE="wlan0"
 
 # https://packages.gentoo.org/packages/sys-kernel/gentoo-kernel-bin
-KERNEL="sys-kernel/gentoo-kernel-bin:5.15.83"
+KERNEL="sys-kernel/gentoo-kernel-bin:5.15.85"
 
 
 source /etc/profile
@@ -17,14 +17,14 @@ emerge --sync
 eselect profile set 9
 emerge --verbose --update --deep --newuse @world
 
-emerge app-editors/neovim
-emerge $KERNEL
-emerge sys-apps/pciutils
 emerge sys-kernel/linux-firmware
+emerge sys-apps/pciutils
+emerge $KERNEL
 emerge net-misc/dhcpcd
 emerge net-wireless/wpa_supplicant
 emerge sys-boot/grub
 emerge app-admin/sudo
+emerge app-editors/neovim
 
 echo "Australia/Brisbane" > /etc/timezone
 emerge --config sys-libs/timezone-data
