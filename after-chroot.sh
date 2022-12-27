@@ -6,9 +6,6 @@ DISK=/dev/sda
 # ip a
 INTERFACE="wlan0"
 
-# https://packages.gentoo.org/packages/sys-kernel/gentoo-kernel-bin
-KERNEL="sys-kernel/gentoo-kernel-bin:5.15.85"
-
 
 source /etc/profile
 mount "$DISK""1" /boot
@@ -19,7 +16,7 @@ emerge --verbose --update --deep --newuse @world
 
 emerge sys-kernel/linux-firmware
 emerge sys-apps/pciutils
-emerge $KERNEL
+emerge sys-kernel/gentoo-kernel-bin
 emerge net-misc/dhcpcd
 emerge net-wireless/wpa_supplicant
 emerge sys-boot/grub
