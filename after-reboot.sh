@@ -17,7 +17,6 @@ rc-update add NetworkManager default
 
 emerge x11-base/xorg-drivers
 emerge dev-libs/wayland
-
 emerge kde-plasma/plasma-meta
 emerge konsole
 emerge kde-apps/kwalletmanager
