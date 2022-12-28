@@ -1,3 +1,5 @@
+rm /after-chroot.sh
+
 emerge sys-auth/elogind
 rc-update add elogind boot
 
@@ -43,3 +45,4 @@ chmod a+x /etc/sddm/scripts/wayland-setup
 chmod a+x /etc/sddm/scripts/Xsetup
 printf "[wayland]\nDisplayCommand=/etc/sddm/scripts/wayland-setup\n\n[X11]\nDisplayCommand=/etc/sddm/scripts/Xsetup\n" > /etc/sddm.conf
 echo "DISPLAYMANAGER=\"sddm\"" > /etc/conf.d/display-manager
+usermod -aG plugdev,sddm connor
