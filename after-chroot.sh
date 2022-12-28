@@ -4,7 +4,7 @@
 DISK=/dev/sda
 
 # ip a
-INTERFACE="wlan0"
+INTERFACE="wlp3s0"
 
 
 source /etc/profile
