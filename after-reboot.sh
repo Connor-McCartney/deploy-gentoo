@@ -32,7 +32,6 @@ emerge sys-process/htop
 emerge net-libs/nodejs
 emerge gui-apps/wl-clipboard
 emerge x11-misc/xclip
-emerge kde-plasma/plasma-pa
 emerge media-fonts/iosevka
 
 rc-update add xdm default
