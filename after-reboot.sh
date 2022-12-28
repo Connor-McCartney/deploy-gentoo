@@ -15,10 +15,10 @@ emerge sys-fs/udisks
 rc-update add lvm boot
 rc-update add NetworkManager default
 
-emerge kde-plasma/plasma-pa
 emerge x11-base/xorg-drivers
 emerge dev-libs/wayland
 emerge kde-plasma/plasma-meta
+emerge kde-plasma/plasma-pa
 emerge konsole
 emerge kde-apps/kwalletmanager
 emerge kde-misc/bismuth
