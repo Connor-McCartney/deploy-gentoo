@@ -13,6 +13,7 @@ emerge sys-auth/polkit
 emerge sys-fs/udisks
 
 rc-update add lvm boot
+emerge net-misc/networkmanager
 rc-update add NetworkManager default
 
 emerge x11-base/xorg-drivers
