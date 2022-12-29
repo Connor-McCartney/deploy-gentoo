@@ -13,7 +13,6 @@ emerge sys-auth/polkit
 emerge sys-fs/udisks
 
 rc-update add lvm boot
-emerge net-misc/networkmanager
 
 emerge x11-base/xorg-drivers
 emerge dev-libs/wayland
