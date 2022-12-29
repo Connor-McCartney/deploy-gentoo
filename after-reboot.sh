@@ -40,6 +40,10 @@ emerge net-libs/nodejs
 emerge gui-apps/wl-clipboard
 emerge x11-misc/xclip
 emerge media-fonts/iosevka
+emerge net-im/discord-bin
+emerge app-admin/keepassxc
+emerge app-text/obsidian
+emerge app-office/onlyoffice-bin
 
 rc-update add xdm default
 emerge x11-misc/sddm
