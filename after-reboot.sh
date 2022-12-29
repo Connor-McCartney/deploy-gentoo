@@ -24,8 +24,10 @@ rm make.conf
 wget https://raw.githubusercontent.com/Connor-McCartney/deploy-gentoo/main/make2.conf
 mv make2.conf make.conf
 emerge kde-plasma/plasma-meta
-emerge kde-plasma/plasma-pa
+rm make.conf
+wget https://raw.githubusercontent.com/Connor-McCartney/deploy-gentoo/main/make.conf
 
+emerge kde-plasma/plasma-pa
 emerge konsole
 emerge kde-apps/kwalletmanager
 emerge kde-misc/bismuth
