@@ -10,10 +10,6 @@ INTERFACE="wlp3s0"
 source /etc/profile
 mount "$DISK""1" /boot
 
-emerge app-eselect/eselect-repository
-eselect repository enable r7l
-eselect repository enable src_prepare-overlay
-
 emerge-webrsync
 emerge --sync
 eselect profile set 9
