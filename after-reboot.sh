@@ -43,8 +43,6 @@ emerge media-fonts/iosevka
 emerge media-fonts/fonts-meta
 emerge net-im/discord-bin
 emerge app-admin/keepassxc
-emerge app-text/obsidian
-emerge app-office/onlyoffice-bin
 
 rc-update add xdm default
 emerge x11-misc/sddm
