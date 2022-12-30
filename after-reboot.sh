@@ -41,7 +41,6 @@ emerge gui-apps/wl-clipboard
 emerge x11-misc/xclip
 emerge media-fonts/iosevka
 emerge media-fonts/fonts-meta
-
 emerge net-im/discord-bin
 emerge app-admin/keepassxc
 emerge app-text/obsidian
