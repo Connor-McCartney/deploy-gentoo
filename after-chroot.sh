@@ -20,6 +20,7 @@ emerge sys-apps/pciutils
 emerge sys-kernel/gentoo-kernel-bin
 emerge net-misc/dhcpcd
 emerge net-wireless/wpa_supplicant
+emerge net-misc/networkmanager # just in case you need it, wpa_supplicant and dhcpcd is enough
 emerge sys-boot/grub
 emerge app-admin/sudo
 emerge app-editors/neovim
